@@ -25,10 +25,9 @@ def left_to_right(trans_left):
     z = [[1, 0, 0, 0],
          [0, 1, 0, 0],
          [0, 0,-1, 0],
-         [0, 0, 0, 0]]
+         [0, 0, 0, 1]]
     r = a_muti_b(z, trans_left)
     r = a_muti_b(r, z)
-    r[3][3] = 1
     return r
 
 
@@ -70,14 +69,17 @@ if __name__ == "__main__":
     print(right_move(p, 1, 0, 0))
     print(right_move(p, 0, 1, 0))
     print(right_move(p, 0, 0, 1))
+    print("left")
     print(right_move(p, 1, 0, 0, True))
     print(right_move(p, 0, 1, 0, True))
     print(right_move(p, 0, 0, 1, True))
+    print("right")
     print(right_trans(p, math.pi/2, 0, 0))
     print(right_trans(p, 0, math.pi/2, 0))
     print(right_trans(p, 0, 0, math.pi/2))
     # print()
     # print(p)
+    print("left")
     print(right_trans(p, math.pi/2, 0, 0, True))
     # print()
     # print(p)
